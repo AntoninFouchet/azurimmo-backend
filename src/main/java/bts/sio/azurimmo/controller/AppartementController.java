@@ -43,4 +43,16 @@ public class AppartementController {
         return appartementService.findAppartementsBySurfaceGreaterThan(surface);
     }
 
+    @GetMapping("/all")
+    @Operation(summary = "Lister tous les appartements")
+    public List<AppartementDTO> getAllAppartements() {
+        return appartementService.getAllAppartements();
+    }
+
+    @GetMapping("/{id}")
+    @Operation(summary = "Consulter un appartement via son ID")
+    public AppartementDTO getAppartementById(@PathVariable Long id) {
+        return appartementService.getAppartementById(id);
+    }
+
 }
