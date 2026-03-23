@@ -18,7 +18,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
 @RequestMapping("/api/type-interventions")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin("*")
 @Tag(name = "Type Intervention", description = "API pour la gestion des types d'interventions")
 public class TypeInterventionController {
 
