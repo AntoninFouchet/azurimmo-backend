@@ -11,9 +11,7 @@ import bts.sio.azurimmo.model.Paiement;
 import bts.sio.azurimmo.dto.PaiementDTO;
 import bts.sio.azurimmo.mapper.PaiementMapper;
 import bts.sio.azurimmo.repository.PaiementRepository;
-import lombok.Data;
 
-@Data
 @Service
 public class PaiementService {
 
