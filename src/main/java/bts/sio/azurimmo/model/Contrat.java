@@ -4,9 +4,11 @@ import java.time.LocalDate;
 import java.util.List;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 @Entity
 @Table(name = "contrat")
 public class Contrat {
