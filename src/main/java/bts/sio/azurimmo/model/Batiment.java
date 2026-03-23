@@ -1,9 +1,8 @@
 package bts.sio.azurimmo.model;
 
 import jakarta.persistence.*;
-import jakarta.persistence.OneToMany;
 import lombok.Data;
-import java.util.List; 
+import java.util.List;
 
 @Data
 @Entity
@@ -20,7 +19,10 @@ public class Batiment {
     @Column(name="ville")
     private String ville;
 
-
     @OneToMany(mappedBy = "batiment")
     private List<Appartement> appartements;
+
+    @ManyToOne
+    @JoinColumn(name = "gerant_id")
+    private Gerant gerant;
 }
