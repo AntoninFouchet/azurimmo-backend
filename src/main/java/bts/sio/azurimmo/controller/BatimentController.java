@@ -14,6 +14,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
 @RequestMapping("/api/batiments")
+@CrossOrigin("*")
 @Tag(name = "Bâtiments", description = "API pour la gestion des bâtiments")
 public class BatimentController {
 

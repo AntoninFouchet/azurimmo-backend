@@ -10,9 +10,8 @@ import bts.sio.azurimmo.model.Appartement;
 import bts.sio.azurimmo.dto.AppartementDTO;
 import bts.sio.azurimmo.mapper.AppartementMapper;
 import bts.sio.azurimmo.repository.AppartementRepository;
-import lombok.Data;
 
-@Data
+
 @Service
 public class AppartementService {
 	

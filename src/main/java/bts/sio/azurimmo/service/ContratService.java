@@ -11,9 +11,8 @@ import bts.sio.azurimmo.model.Contrat;
 import bts.sio.azurimmo.dto.ContratDTO;
 import bts.sio.azurimmo.mapper.ContratMapper;
 import bts.sio.azurimmo.repository.ContratRepository;
-import lombok.Data;
 
-@Data
+
 @Service
 public class ContratService {
 	

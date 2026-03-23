@@ -12,9 +12,7 @@ import bts.sio.azurimmo.dto.LocataireDTO;
 import bts.sio.azurimmo.mapper.LocataireMapper;
 import bts.sio.azurimmo.repository.LocataireRepository;
 
-import lombok.Data;
 
-@Data
 @Service
 public class LocataireService {
 
