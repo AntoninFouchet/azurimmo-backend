@@ -49,4 +49,16 @@ public class AppartementService {
 		 Appartement saved = appartementRepository.save(entity);
 		 return AppartementMapper.toDTO(saved);
 	 }
+
+	public List<AppartementDTO> getAllAppartements() {
+		return appartementRepository.findAll().stream()
+				.map(AppartementMapper::toDTO)
+				.collect(Collectors.toList());
+	}
+
+	public AppartementDTO getAppartementById(Long id) {
+		return appartementRepository.findById(id)
+				.map(AppartementMapper::toDTO)
+				.orElse(null);
+	}
 }
