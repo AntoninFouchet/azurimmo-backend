@@ -9,6 +9,7 @@ public class AppartementMapper {
         if (a == null) return null;
 
         AppartementDTO dto = new AppartementDTO();
+        dto.setId(a.getId());
         dto.setNumero(String.valueOf(a.getNumero())); 
         dto.setDescription(a.getDescription());
         dto.setSurface(a.getSurface());
