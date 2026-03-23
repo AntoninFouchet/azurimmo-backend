@@ -22,8 +22,8 @@ public class AppartementController {
 	
     @PostMapping("/")
     @Operation(summary = "Ajouter un appartement")
-    public Appartement createAppartement(@RequestBody Appartement appartement) {
-        return appartementService.saveAppartement(appartement);
+    public AppartementDTO createAppartement(@RequestBody AppartementDTO appartementDTO) {
+        return appartementService.saveAppartementDTO(appartementDTO);
     }
     
     @GetMapping("/ville/{ville}")
