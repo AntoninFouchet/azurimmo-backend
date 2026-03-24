@@ -34,20 +34,11 @@ public class BatimentController {
         return ResponseEntity.status(201).body(savedDTO); 
     }
 
-
-/*    
     @GetMapping("/{batimentId}")
-    public Optional <BatimentDTO> getBatimentDTO(@PathVariable long batimentId) {
-        return batimentService.getBatimentDTO(batimentId);
-    }
-*/
-
-    
-    @GetMapping("/{batimentId}")
-    @Operation(summary = "Consuter un bâtiment")
-    public ResponseEntity<BatimentDTO> getBatimentReDTO(@PathVariable long batimentId) {
-            return batimentService.getBatimentDTO(batimentId)
-                                  .map(ResponseEntity::ok)   // batiment trouvé → 200
-                                  .orElse(ResponseEntity.notFound().build()); // pas trouvé → 404
+    @Operation(summary = "Consulter un bâtiment")
+    public ResponseEntity<BatimentDTO> getBatimentById(@PathVariable long batimentId) {
+        return batimentService.getBatimentDTO(batimentId)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
     }
 }
