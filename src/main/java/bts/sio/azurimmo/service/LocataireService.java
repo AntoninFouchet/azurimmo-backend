@@ -51,4 +51,12 @@ public class LocataireService {
 		 Locataire saved = locataireRepository.save(entity);
 		 return LocataireMapper.toDTO(saved);
 	 }
+
+
+	public List<LocataireDTO> getLocatairesParBatiment(Long batimentId) {
+		return locataireRepository.findByContrats_Appartement_Batiment_Id(batimentId)
+				.stream()
+				.map(LocataireMapper::toDTO)
+				.collect(Collectors.toList());
+	}
 }

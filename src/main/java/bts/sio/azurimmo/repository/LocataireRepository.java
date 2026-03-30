@@ -8,4 +8,6 @@ import bts.sio.azurimmo.model.Locataire;
 @Repository
 public interface LocataireRepository extends JpaRepository<Locataire, Long> {
         List<Locataire> findByContrats_Id(long contratId);
+
+        List<Locataire> findByContrats_Appartement_Batiment_Id(Long batimentId);
 }
