@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import bts.sio.azurimmo.dto.BatimentDTO;
 import bts.sio.azurimmo.service.BatimentService;
 
-import io.swagger.v3.oas.annotations.Operation; // Import Swagger
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag; 
 
 @RestController
@@ -19,12 +19,12 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 public class BatimentController {
 
     @Autowired 
-    private BatimentService batimentService; 
-    
-    @GetMapping("/")
+    private BatimentService batimentService;
+
+    @GetMapping("/all")
     @Operation(summary = "Lister tous les bâtiments")
     public List<BatimentDTO> getAllBatiments() {
-        return batimentService.getBatimentsDTO(); 
+        return batimentService.getBatimentsDTO();
     }
     
     @PostMapping("/")
