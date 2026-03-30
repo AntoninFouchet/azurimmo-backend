@@ -13,6 +13,7 @@ public class LocataireMapper {
 		if (l == null) return null;
 		
 		LocataireDTO dto = new LocataireDTO();
+		dto.setId(l.getId());
 		dto.setPrenom(l.getPrenom());
 		dto.setNom(l.getNom());
 		dto.setNumeroTel(l.getNumeroTel());
@@ -27,6 +28,7 @@ public class LocataireMapper {
 		  if (dto == null) return null;
 		  
 		Locataire l = new Locataire();
+		l.setId(dto.getId());
 		l.setPrenom(dto.getPrenom());
 		l.setNom(dto.getNom());
 		l.setNumeroTel(dto.getNumeroTel());
