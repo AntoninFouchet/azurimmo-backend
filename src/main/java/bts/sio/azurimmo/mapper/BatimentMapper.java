@@ -12,6 +12,7 @@ public class BatimentMapper {
         if (b == null) return null;
 
         BatimentDTO dto = new BatimentDTO();
+        dto.setId(b.getId());
         dto.setAdresse(b.getAdresse());
         dto.setVille(b.getVille());
         dto.setGerant(GerantMapper.toDTO(b.getGerant()));
@@ -31,6 +32,7 @@ public class BatimentMapper {
         if (dto == null) return null;
 
         Batiment b = new Batiment();
+        b.setId(dto.getId());
         b.setAdresse(dto.getAdresse());
         b.setVille(dto.getVille());
         b.setGerant(GerantMapper.toEntity(dto.getGerant()));
