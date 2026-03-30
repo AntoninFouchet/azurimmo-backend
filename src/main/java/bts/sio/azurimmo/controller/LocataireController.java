@@ -49,4 +49,10 @@ public class LocataireController {
     public List<LocataireDTO> getLocatairesParContrat(@PathVariable long contratId) { 
             return locataireService.getLocataireParContrat(contratId);
      }
+
+    @GetMapping("/batiment/{batimentId}")
+    @Operation(summary = "Lister les locataires d'un bâtiment")
+    public List<LocataireDTO> getLocatairesParBatiment(@PathVariable long batimentId) {
+        return locataireService.getLocatairesParBatiment(batimentId);
+    }
 }
